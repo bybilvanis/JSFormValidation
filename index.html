@@ -7,68 +7,72 @@
 </head>
 <body>
 	<h1>Eindwerk</h1>
-	<form action="myForm" onsubmit="return false">
+	<form id="myForm" onsubmit="return false">
 		<ul>
+			<fieldset>
 	        <li>
 	            <label for="voornaam">Voornaam</label>
 	            <input type="text" id="voornaam" name="voornaam">
-	            <span class="fout" id="foutVoornaam">De voornaam moet ingevuld worden</span>
-	            <span class="fout" id="invVoornaam">De voornaam moet minimum 2 karakters lang zijn</span>
+	            <span class="fout" id="foutVoornaam">Vul uw voornaam in!</span>
+	            <span class="fout" id="fout2Voornaam">Minimum aantal letters is 2.</span>
 	        </li>
 	        <li>
-	            <label for="inpAchternaam">Achternaam</label>
-	            <input type="text" id="inpAchternaam" name="achternaam">
-	            <span class="fout" id="errAchternaam">De achternaam moet ingevuld worden</span>
-	            <span class="fout" id="invAchternaam">De achternaam moet minimum 2 karakters lang zijn</span>
+	            <label for="achternaam">Achternaam</label>
+	            <input type="text" id="achternaam" name="achternaam">
+	            <span class="fout" id="foutAchternaam">Vul uw achternaam in!</span>
+	            <span class="fout" id="fout2Achternaam">Minimum aantal letters is 2.</span>
 	        </li>
 	        <li>
-	            <label for="inpStraat">Straat</label>
-	            <input type="text" id="inpStraat" placeholder="straat" name="straat">
-	            <span class="fout" id="errStraat">De straat moet ingevuld worden</span>
-	            <span class="fout" id="invStraat">De straat moet minimum 2 karakters lang zijn</span>
+	            <label for="Straat">Straat</label>
+	            <input type="text" id="Straat" name="straat">
+	            <span class="fout" id="foutStraat">Vul de straat in.</span>
+	            <span class="fout" id="fout2Straat">Minimum aantal letters is 2.</span>
 	        </li>
 	        <li>
-	            <label for="inpStraatnummer">Straatnummer</label>
-	            <input type="text" id="inpStraatnummer" placeholder="1" name="straatnummer">
-	            <span class="fout" id="errStraatnummer">De straatnummer moet ingevuld worden</span>
-	            <span class="fout" id="invStraatnummer">De straatnummer moet minstens 1 cijfer bevatten, er mag ook een letter inzitten</span>
+	            <label for="straatnummer">Straatnummer</label>
+	            <input type="text" id="straatnummer" name="straatnummer">
+	            <span class="fout" id="foutStraatnummer">Vul de straatnummer in!</span>
+	            <span class="fout" id="fout2Straatnummer">Geef minimum een cijfer in, er mag ook een letter bij zijn.</span>
 	        </li>
 	        <li>
-	            <label for="inpPostcode">Postcode</label>
-	            <input type="number" id="inpPostcode" placeholder="1000" name="postcode">
-	            <span class="fout" id="errPostcode">De postcode moet ingevuld worden</span>
-	            <span class="fout" id="invPostcode">De postcode moet uit 4 of meer cijfers bestaan</span>
+	            <label for="postcode">Postcode</label>
+	            <input type="text" id="postcode" name="postcode">
+	            <span class="fout" id="foutPostcode">Vul de postcode in!</span>
+	            <span class="fout" id="fout2Postcode">Minimum aantal cijfers is 4.</span>
 	        </li>
 	        <li>
-	            <label for="inpGemeente">Gemeente</label>
-	            <input type="text" id="inpGemeente" placeholder="gemeente" name="gemeente">
-	            <span class="fout" id="errGemeente">De gemeente moet ingevuld worden</span>
-	            <span class="fout" id="invGemeente">De gemeente moet minimum 2 karakters lang zijn</span>
+	            <label for="gemeente">Gemeente</label>
+	            <input type="text" id="gemeente" name="gemeente">
+	            <span class="fout" id="foutGemeente">Vul de gemeente in!</span>
+	            <span class="fout" id="fout2Gemeente">Minimum aantal letters is 2.</span>
 	        </li>
 	        <li>
-	            <label for="inpEmail">Email</label>
-	            <input type="text" id="inpEmail" placeholder="email" name="email">
-	            <span class="fout" id="errEmail">De email moet ingevuld worden</span>
-	            <span class="fout" id="invEmail">Dit is geen geldig email adres. Een geldig email adres is bijvoorbeeld "john@doe.com"</span>
+	            <label for="email">Email</label>
+	            <input type="text" id="email" name="email">
+	            <span class="fout" id="foutEmail">Vul uw email in!</span>
+	            <span class="fout" id="fout2Email">Vul een geldig emailadres in bv. "name@web.com"</span>
 	        </li>
+	        </fieldset>
 	        <fieldset>
 		        <li>
-		            <label for="inpWachtwoord1">Wachtwoord</label>
-		            <input type="password" id="inpWachtwoord1" placeholder="wachtwoord" name="wachtwoord1">
-		            <span class="fout" id="errWachtwoord1">Het wachtwoord moet ingevuld worden</span>
-		            <span class="fout" id="invWachtwoord1">Het wachtwoord moet 7 tot 20 karakters lang zijn en minstens 1 cijfer en 1 letter bevatten. volgende tekens zijn ook toegelaten: !@#$%^&amp;*()_+{}:&lt;&gt;?\|[];\',./~ </span>
+		            <label for="wachtwoord">Wachtwoord</label>
+		            <input type="password" id="wachtwoord" name="wachtwoord">
+		            <span class="fout" id="foutwachtwoord">Vul uw wachtwoord in!</span>
+		            <span class="fout" id="fout2wachtwoord">Minimum aantal karakters zijn 7, maximum 20. Er moet minstens een cijfer en een letter in zijn. Toegelaten tekens: !@#$%^&amp;*()_+{}:&lt;&gt;?\|[];\',./~ </span>
+
 		        </li>
 		        <li>
-		            <label for="inpWachtwoord2">Bevestig</label>
-		            <input type="password" id="inpWachtwoord2" placeholder="wachtwoord" name="wachtwoord2">
-		            <span class="fout" id="errWachtwoord2">De bevestiging moet ingevuld worden</span>
-		            <span class="fout" id="invWachtwoord2">De bevestiging moet identiek zijn aan het ingevulde wachtwoord</span>
+		            <label for="wachtoord2">Bevestig</label>
+		            <input type="password" id="wachtoord2" name="wachtwoord2">
+		            <span class="fout" id="foutWachtwoord2">Bevestig uw wachtwoord!</span>
+		            <span class="fout" id="fout2Wachtwoord2">Wachtwoorden komen niet overeen.</span>
 		        </li>
 	        </fieldset>
 	        <li>
-	            <button onclick="maakGebruiker()">Verstuur</button>
+	            <button onclick="formValidatie()">Verstuur</button>
 	        </li>
     	</ul>
 	</form>
+	<script src="js/main.js"></script>
 </body>
 </html>

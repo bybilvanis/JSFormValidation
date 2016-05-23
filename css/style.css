@@ -5,7 +5,7 @@ body {
 label{
     display: inline-block;
     width: 10em;
-    text-align: right;
+    text-align: left;
     padding-right: 2em;
 }
 form{
@@ -13,6 +13,7 @@ form{
 }
 ul{
     list-style: none;
+    width: 800px;
 }
 li{
     line-height: 2em;
@@ -30,11 +31,62 @@ ul > li> span:first-child {
 ul > li> span:last-child {
 	display: none;
 }
-fieldset {
-	max-width: 500px;
-	float: left;
+fieldset:nth-child(2){
+	border-top: none;
 }
 button {
 	clear: both;
 	display: block;
+	margin: 10px auto;
+	padding: 10px;
+	border-radius: 4px;
+	background-color: black;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	transition: all 0.5s;
+	cursor: pointer;
+	font-size: 2em;
+}
+
+/*button*/
+
+label.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: black;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  /*font-size: 28px;*/
+  /*padding: 20px;*/
+  /*width: 200px;*/
+  transition: all 0.5s;
+  cursor: pointer;
+  /*margin: 5px;*/
+}
+
+label.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+label.button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+label.button:hover span {
+  padding-right: 25px;
+}
+
+label.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
