@@ -2,50 +2,73 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Formulier JS</title>
+	<title>Eindwerk</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>Eindwerk Webanimatie: Formulier JavaScript</h1>
-	<form id="myForm" name="myForm" onsubmit="return validateForm('myForm')" method="post">
-		<label for="voornaam">Voornaam
-			<input type="text" id="voornaam">
-			<span class="leeg"></span>
-		</label>
-		<label for="achternaam">Achternaam
-			<input type="text" id="achternaam">
-			<span class="leeg"></span>
-		</label>
-		<label for="straat">Straat
-			<input type="text" id="straat">
-			<span class="leeg"></span>
-		</label>
-		<label for="straatnummer">Straatnummer
-			<input type="text" id="straatnummer">
-			<span class="leeg"></span>
-		</label>
-		<label for="postcode">Postcode
-			<input type="text" id="postcode">
-			<span class="leeg"></span>
-		</label>
-		<label for="gemeente">Gemeente
-			<input type="text" id="gemeente">
-			<span class="leeg"></span>
-		</label>
-		<label for="emailadres">Emailadres
-			<input type="text" id="emailadres">
-			<span class="leeg"></span>
-		</label>
-		<label for="wachtwoord">Wachtwoord
-			<input type="password" id="wachtwoord">		
-			<span class="leeg"></span>
-		</label>
-		<label for="wachtwoord2">Wachtwoord bevestiging
-			<input type="password" id="wachtwoord2">
-			<span class="leeg"></span>
-		</label>
-		<input type="submit" value="Verstuur">
+	<h1>Eindwerk</h1>
+	<form action="myForm" onsubmit="return false">
+		<ul>
+	        <li>
+	            <label for="voornaam">Voornaam</label>
+	            <input type="text" id="voornaam" name="voornaam">
+	            <span class="fout" id="foutVoornaam">De voornaam moet ingevuld worden</span>
+	            <span class="fout" id="invVoornaam">De voornaam moet minimum 2 karakters lang zijn</span>
+	        </li>
+	        <li>
+	            <label for="inpAchternaam">Achternaam</label>
+	            <input type="text" id="inpAchternaam" name="achternaam">
+	            <span class="fout" id="errAchternaam">De achternaam moet ingevuld worden</span>
+	            <span class="fout" id="invAchternaam">De achternaam moet minimum 2 karakters lang zijn</span>
+	        </li>
+	        <li>
+	            <label for="inpStraat">Straat</label>
+	            <input type="text" id="inpStraat" placeholder="straat" name="straat">
+	            <span class="fout" id="errStraat">De straat moet ingevuld worden</span>
+	            <span class="fout" id="invStraat">De straat moet minimum 2 karakters lang zijn</span>
+	        </li>
+	        <li>
+	            <label for="inpStraatnummer">Straatnummer</label>
+	            <input type="text" id="inpStraatnummer" placeholder="1" name="straatnummer">
+	            <span class="fout" id="errStraatnummer">De straatnummer moet ingevuld worden</span>
+	            <span class="fout" id="invStraatnummer">De straatnummer moet minstens 1 cijfer bevatten, er mag ook een letter inzitten</span>
+	        </li>
+	        <li>
+	            <label for="inpPostcode">Postcode</label>
+	            <input type="number" id="inpPostcode" placeholder="1000" name="postcode">
+	            <span class="fout" id="errPostcode">De postcode moet ingevuld worden</span>
+	            <span class="fout" id="invPostcode">De postcode moet uit 4 of meer cijfers bestaan</span>
+	        </li>
+	        <li>
+	            <label for="inpGemeente">Gemeente</label>
+	            <input type="text" id="inpGemeente" placeholder="gemeente" name="gemeente">
+	            <span class="fout" id="errGemeente">De gemeente moet ingevuld worden</span>
+	            <span class="fout" id="invGemeente">De gemeente moet minimum 2 karakters lang zijn</span>
+	        </li>
+	        <li>
+	            <label for="inpEmail">Email</label>
+	            <input type="text" id="inpEmail" placeholder="email" name="email">
+	            <span class="fout" id="errEmail">De email moet ingevuld worden</span>
+	            <span class="fout" id="invEmail">Dit is geen geldig email adres. Een geldig email adres is bijvoorbeeld "john@doe.com"</span>
+	        </li>
+	        <fieldset>
+		        <li>
+		            <label for="inpWachtwoord1">Wachtwoord</label>
+		            <input type="password" id="inpWachtwoord1" placeholder="wachtwoord" name="wachtwoord1">
+		            <span class="fout" id="errWachtwoord1">Het wachtwoord moet ingevuld worden</span>
+		            <span class="fout" id="invWachtwoord1">Het wachtwoord moet 7 tot 20 karakters lang zijn en minstens 1 cijfer en 1 letter bevatten. volgende tekens zijn ook toegelaten: !@#$%^&amp;*()_+{}:&lt;&gt;?\|[];\',./~ </span>
+		        </li>
+		        <li>
+		            <label for="inpWachtwoord2">Bevestig</label>
+		            <input type="password" id="inpWachtwoord2" placeholder="wachtwoord" name="wachtwoord2">
+		            <span class="fout" id="errWachtwoord2">De bevestiging moet ingevuld worden</span>
+		            <span class="fout" id="invWachtwoord2">De bevestiging moet identiek zijn aan het ingevulde wachtwoord</span>
+		        </li>
+	        </fieldset>
+	        <li>
+	            <button onclick="maakGebruiker()">Verstuur</button>
+	        </li>
+    	</ul>
 	</form>
-	<script src="js/main.js"></script>
 </body>
 </html>

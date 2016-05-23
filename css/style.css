@@ -2,12 +2,39 @@ body {
 	font-family: 'Open Sans', Arial, Verdana, sans-serif;
 }
 
-label {
+label{
+    display: inline-block;
+    width: 10em;
+    text-align: right;
+    padding-right: 2em;
+}
+form{
+    min-width: 40em;
+}
+ul{
+    list-style: none;
+}
+li{
+    line-height: 2em;
+}
+input[type="submit"]{
+    display: inline-block;
+    margin-left: 14em;
+}
+.fout{
+    display: none;
+}
+ul > li> span:first-child {
+	display: inline;
+}
+ul > li> span:last-child {
+	display: none;
+}
+fieldset {
+	max-width: 500px;
+	float: left;
+}
+button {
+	clear: both;
 	display: block;
-}
-input {
-	display: inline-block;
-	margin: 10px;
-}
-div#leeg {
 }
