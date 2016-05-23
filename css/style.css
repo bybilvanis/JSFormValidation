@@ -1,0 +1,13 @@
+body {
+	font-family: 'Open Sans', Arial, Verdana, sans-serif;
+}
+
+label {
+	display: block;
+}
+input {
+	display: inline-block;
+	margin: 10px;
+}
+div#leeg {
+}
